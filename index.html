@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Document</title>
-</head>
-<body>
-    <div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="form-logo">
+            <div class="logo-banner"></div>
+            <img src="./images/background.jpg" alt="A church in Santorini">
+            <p class="image-credit">Photo by 
+                <a target="_blank" href="https://unsplash.com/@alexdeloy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Alexander Psiuk</a> 
+                on 
+                <a target="_blank" href="https://unsplash.com/photos/a-church-with-a-bell-tower-next-to-a-body-of-water-lL6c6aWRSck?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            </p>
+        </div>
 
-    </div>
-    <section>
-        <header>
+        <section>
+            <header class="form-header">
+                This is the form header.
+            </header>
+            <form class="signup-form" method="post" action="">
+                <section class="form-main">
+                    <div class="form-row">
+                        <div class="form-input">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name">
+                        </div>
+                        <div class="form-input">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-input">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-input">
+                            <label for="phone">Phone Number</label>
+                            <input type="number" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-input">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <div class="form-input">
+                            <label for="password-confirm">Confirm Password</label>
+                            <input type="password" id="password-confirm" name="password-confirm">
+                        </div>
+                    </div>
+                </section>
 
-        </header>
-        <form>
-            
-        </form>
-    </section>
-</body>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </body>
 </html>
