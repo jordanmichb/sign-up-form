@@ -4,18 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles.css">
+        <script src="./script.js"></script>
         <title>Document</title>
     </head>
     <body>
-        <div class="form-logo">
+        <div class="form-image">
             <div class="logo-banner"><img src="./images/logo.png" alt="Company logo"><P>Backpack</p></div>
-            <img src="./images/background.jpg" alt="A church in Santorini">
-            <p class="image-credit">Photo by 
+            <!--<img src="./images/background.jpg" alt="A church in Santorini">-->
+            <!--<p class="image-credit">Photo by 
                 <a target="_blank" href="https://unsplash.com/@cedricletsch?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" >Cedric Letsch</a> 
                 on 
                 <a target="_blank" href="https://unsplash.com/photos/person-in-black-jacket-standing-on-green-grass-near-body-of-water-during-daytime-ie2xdSo3POc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   
-            </p>
+            </p>-->
         </div>
 
         <section>
@@ -27,18 +28,18 @@
                 <section class="form-main">
                     <div class="form-row">
                         <div class="form-input">
-                            <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" name="first-name">
+                            <label for="first-name">First Name*</label>
+                            <input type="text" id="first-name" name="first-name" required>
                         </div>
                         <div class="form-input">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" name="last-name">
+                            <label for="last-name">Last Name*</label>
+                            <input type="text" id="last-name" name="last-name" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-input">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-input">
                             <label for="phone">Phone Number</label>
@@ -47,12 +48,12 @@
                     </div>
                     <div class="form-row">
                         <div class="form-input">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password">
+                            <label for="password">Password*</label>
+                            <input type="password" id="password" name="password" minlength="8">
                         </div>
                         <div class="form-input">
-                            <label for="password-confirm">Confirm Password</label>
-                            <input type="password" id="password-confirm" name="password-confirm">
+                            <label for="password-confirm">Confirm Password*</label>
+                            <input type="password" id="password-confirm" name="password-confirm" required>
                         </div>
                     </div>
                 </section>

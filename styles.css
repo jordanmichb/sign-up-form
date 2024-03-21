@@ -34,6 +34,11 @@
     font-style: normal;
 }
 
+:root {
+    --accent-color: #BB55A2;
+    --form-side-margins: 3rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -42,71 +47,81 @@
 
 body {
     display: flex;
-    height: 100vh;
     font-family: 'raleway', sans-serif;
+
 }
 
-.form-logo {
+.form-image {
+    position: static;
     width: 40%;
-    min-height: 100%;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    min-height: 800px;
 }
 
 .logo-banner {
-    width: 40%;
-    height: 100px;
+    width: 100%;
+    height: 120px;
     color: white;
     background-color: rgba(0, 0, 0, 0.47);
+    margin-top: 200px;
 
-    position: absolute;
-    top: calc(101px + 5.1rem);
+    /*position: absolute;
+    top: calc(101px + 5.1rem);*/
 
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
+    /*font-size: 2rem;*/
+    font-size: clamp(2rem, 4vw + 1rem, 6rem);
+
     font-family: 'comfortaathin';
     letter-spacing: .05em;
 }
 
 .logo-banner img {
-    width: 4rem;
-    height: 4rem;
-    margin-right: 1.5rem;
+    /*width: 4rem;
+    height: 4rem;*/
+    width: clamp(25px, 4vw + 1rem, 6rem);
+    height: clamp(25px, 4vw + 1rem, 6rem);
+    margin-right: clamp(.1rem, 1vw + 1rem, 1.5rem);
 }
 
-.form-logo > p {
+.image-credit {
     position: relative;
-    bottom: 3%;
-    margin: 0 auto;
-    width: 100%;
+    display:inline-block;
+
     text-align: center;
     color: white;
     font-size: .6rem;
     letter-spacing: .15em;
 }
 
-.form-logo a {
+.form-image a {
     color: white;
 }
 
-img {
+/*img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+}*/
 
 section {
     display: flex;
     flex-direction: column;
     background-color: #fafafa;
     width: 60%;
+    padding: 2rem 0;
 }
 
 .form-header {
-    padding: 0 2rem;
-    margin: 20vh 0 3rem 0;
+    margin: 10vh var(--form-side-margins) 3rem var(--form-side-margins);
     font-family: 'ralewaysemibold', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 2.5rem;
 }
 
@@ -130,42 +145,99 @@ section {
 
 .form-input {
     flex: 1;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 1rem 0;
+    margin-left: var(--form-side-margins);
 }
 
 .form-input label {
     display: block;
+    font-weight: 600;
+    font-size: .75rem;
+    letter-spacing: .1em;
+    margin-bottom: .2rem;
 }
 
 .form-input input {
     width: 100%;
     height: 1.8rem;
-    font-family: 'ralewayregular';
+    padding: .9rem .5rem;
+    font-family: 'raleway';
+    outline: 1px solid gray; 
+    border: none;
+    border-radius: 5px;
 }
 
-.form-row label:first-child {
+.form-input input:focus {
+    outline: 2px solid var(--accent-color);
+    box-shadow: 2px 2px 5px #d9d9d9;
+}
 
+#password:invalid {
+    outline: 2px solid red;
 }
 
 button[type="submit"] {
-    margin: 0 0 2rem 2rem;
+    margin: 0 0 2rem var(--form-side-margins);
     padding: 1rem 2rem;
     font-family: 'raleway';
     font-weight: 600;
     letter-spacing: .1em;
     color: white;
-    background-color: #BB55A2;
+    background-color: var(--accent-color);
     border: none;
     border-radius: 5px;
 }
 
 .signup-form > p {
-    margin-left: 2rem;
+    margin-left: var(--form-side-margins);
 }
 
 .signup-form > p a {
     margin-left: .5rem;
     font-weight: bold;
     text-decoration: underline;
-    color: #BB55A2;
+    color: var(--accent-color);
+}
+
+@media (max-width: 750px) {
+    body, .form-row {
+        flex-direction: column;
+    }
+    .form-image {
+        width: 100%;
+        height: unset;
+        min-height: 150px;
+    }
+    .logo-banner {
+        height: 75px;
+        margin-top: 20px;
+    }
+    section {
+        width: 100%;
+    }
+    .form-header {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: .9rem;
+        line-height: 1.2rem;
+        text-align: center;
+    }
+    .form-header h1 {
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+    }
+    .form-main {
+        margin-bottom: 2rem;
+    }
+    button[type="submit"] {
+        margin-right: var(--form-side-margins);
+        margin-bottom: 1.5rem;
+        width: calc(100% - (var(--form-side-margins) * 2));
+    }
+    .signup-form > p {
+        margin-right: var(--form-side-margins);
+        text-align: center;
+    }
+       
+
 }
