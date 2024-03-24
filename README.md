@@ -1,5 +1,7 @@
 # Sign Up Form
 
+Try it out at: https://jordanmichb.github.io/sign-up-form/
+
 A responsive, mock sign-up form created using HTML, CSS, and JavaScript. Includes input validation and error alerts.
 
 ![Screen Shot 2024-03-24 at 11 38 27 AM](https://github.com/jordanmichb/sign-up-form/assets/95947696/e0c1d14c-88a4-436a-9ab7-81ea235bc585)
