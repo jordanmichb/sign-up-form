@@ -1,4 +1,6 @@
-# Sign Up Form
+# The Odin Project
+
+## Sign Up Form
 
 Try it out at: https://jordanmichb.github.io/sign-up-form/
 
